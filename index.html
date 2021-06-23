@@ -5,96 +5,243 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--Link para a conexão do css externo pelos servidores do bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Spellbreak</title>
 
     <style>
+        .tm-social {
+            width: 60px;
+            height: 60px;
+        }
+
+        .video {
+            height: 300px;
+            margin-right: 25%;
+        }
+        body{
+            overflow-x: hidden;
+        }
+
+        .about{
+            padding: 15px;
+        }
     </style>
 </head>
 
 <body>
-    <!--Menu-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Spellbreak</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Noticias <span class="sr-only">(página atual)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Comunidade</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Comunidade
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Facebook</a>
-                        <a class="dropdown-item" href="#">Twitter</a>
-                        <a class="dropdown-item" href="#">Instagram</a>
-                        <a class="dropdown-item" href="#">Reddit</a>
-                        <a class="dropdown-item" href="#">Youtube</a>
-                        <a class="dropdown-item" href="#">Discord</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Wiki</a>
-                        <a class="dropdown-item" href="#">Codigo de Conduta</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Criador</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Suporte</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <!--Menu-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Spellbreak</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Noticias <span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Comunidade
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Facebook</a>
+                            <a class="dropdown-item" href="#">Twitter</a>
+                            <a class="dropdown-item" href="#">Instagram</a>
+                            <a class="dropdown-item" href="#">Reddit</a>
+                            <a class="dropdown-item" href="#">Youtube</a>
+                            <a class="dropdown-item" href="#">Discord</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Wiki</a>
+                            <a class="dropdown-item" href="#">Codigo de Conduta</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Criador</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mais
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#idiomas">Idiomas Compativeis</a>
+                            <a class="dropdown-item" href="#requisitos">Requisitos do Sistema</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Suporte</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <!--/Menu-->
-<div class="container-fluid mr-25%">
-    <div id="carouselExampleIndicators" class="carousel slide w-50" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <iframe width="691" height="373" src="https://www.youtube.com/embed/sK68uPZF1d4"
+    <!--Carrossel-->
+    <div class="carrosel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="/assets/img/01_StoneFireCombo_4k.jpg" alt="Primeiro Slide">
+                    <div class="carousel-caption d-none d-md-block text-light bg-dark rounded">
+                        <h5>CONSTRUA SEU MAGO DE BATALHA</h5>
+                        <p>Escolha uma classe: Nascido do Gelo, Conduíte, Piromante, Toxicologista, Moldapedras ou
+                            Tempestade. Cada um tem seu próprio estilo de jogo que pode ser personalizado com talentos à
+                            medida que aumenta seu poder. Qual deles você irá dominar?</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="/assets/img/02_ForestShocknado_4k.jpg" alt="Segundo Slide">
+                    <div class="carousel-caption d-none d-md-block text-light bg-dark rounded">
+                        <h5>COMBINE OS ELEMENTOS</h5>
+                        <p> Um poderoso mago de batalha não se limita a apenas uma habilidade. Controle o poder de duas
+                            poderosas manoplas e mescle devastadoras combinações de magias para controlar o campo de
+                            batalha com tornados de fogo, nuvens ácidas eletrificadas e mais!?</p>
+                    </div>
+                </div>
+                <div class="carousel-item justify-content-lg-center">
+                    <img class="d-block w-100" src="/assets/img/03_ToxShockCloud_4k.jpg" alt="Terceiro Slide">
+                    <div class="carousel-caption d-none d-md-block text-light bg-dark rounded">
+                        <h5>ADENTRE UM MUNDO EM CONSTANTE EVOLUÇÃO</h5>
+                        <p> O campo de batalha fraturado das Hollow Lands é apenas o começo de sua aventura no grande
+                            mundo de Primdal. Atualização de novos capítulos revelarão mais sobre a profunda história e
+                            cenário por trás desse poderoso lugar e seu povo.</p>
+                    </div>
+                </div>
+                <div class="carousel-item justify-content-lg-center">
+                    <img class="d-block w-100" src="/assets/img/04_FirevLightning_4k.jpg" alt="Quarto Slide">
+                    <div class="carousel-caption d-none d-md-block text-light bg-dark rounded">
+                        <h5>SUPERE SEUS RIVAIS</h5>
+                        <p>Explore o mapa e encontre vantagens táticas para superar seus oponentes. Descubra baús
+                            escondidos que contém runas mágicas e equipamentos capazes de virar o jogo. Esses itens lhe
+                            darão a habilidade de voar, se teleportar, controlar o tempo, se tornar invisível e mais.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item justify-content-lg-center">
+                    <img class="d-block w-100" src="/assets/img/05_IceArcherTox_4k.jpg" alt="Quinto Slide">
+                    <div class="carousel-caption d-none d-md-block text-light bg-dark rounded">
+                        <h5>LUTE POR TODA HOLLOW LANDS</h5>
+                        <p>Forme uma equipe de poderosos magos de batalha e elimine outros jogadores para sair vitorioso
+                            nesse battle royale único! Atualizações futuras liberarão novos e emocionantes modos de
+                            jogo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+    <div class="about">
+        <div class="row p-0 m-0">
+            <div class="col-md-6">
+                <h3>Spellbreak</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, optio. Saepe esse aliquam in ea?
+                    Molestias pariatur nisi cum praesentium quae obcaecati. Soluta iste nostrum esse reiciendis.
+                    Ratione,
+                    pariatur quae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, sit similique et incidunt molestiae
+                    sed
+                    maxime. Saepe quis ab distinctio fugiat a excepturi! Voluptatem aspernatur veritatis a unde. Iste,
+                    in.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, sit similique et incidunt molestiae
+                    sed
+                    maxime. Saepe quis ab distinctio fugiat a excepturi! Voluptatem aspernatur veritatis a unde. Iste,
+                    in.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <iframe class="d-flex w-100 video" src="https://www.youtube.com/embed/pSmvbSFUDf8"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="/assets/img/01_StoneFireCombo_4k.jpg" alt="Primeiro Slide">
+        </div>
+    </div>
+    <!--/carrosel-->
+    <!--Idioma-->
+    <div id="idiomas">
+        <ul>
+            <li>Portugues</li>
+            <li>Ingles</li>
+            <li>Russo</li>
+        </ul>
+    </div>
+    <!--/Idioma-->
+    <!--Requisitos-->
+    <div id="requisitos">
+        <ul>
+            <li>fsdf</li>
+            <li>Inglfgafges</li>
+            <li>Russgagfgdo</li>
+        </ul>
+    </div>
+    <!--/Requisitos-->
+    <!--Receber notificações-->
+    <div class="d-flex justify-content-center">
+        <form class="bg-light w-50 p-3 rounded center">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Endereço de email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Seu email">
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="/assets/img/02_ForestShocknado_4k.jpg" alt="Segundo Slide">
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
             </div>
-            <div class="carousel-item justify-content-lg-center">
-                <img class="d-block w-100" src="/assets/img/03_ToxShockCloud_4k.jpg" alt="Terceiro Slide">
-            </div>
-            <div class="carousel-item justify-content-lg-center">
-                <img class="d-block w-100" src="/assets/img/04_FirevLightning_4k.jpg" alt="Terceiro Slide">
-            </div>
-            <div class="carousel-item justify-content-lg-center">
-                <img class="d-block w-100" src="/assets/img/05_IceArcherTox_4k.jpg" alt="Terceiro Slide">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    <!--/Receber notificações-->
+
+    <hr>
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <div class="row mb-3 ">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <a href="#" target="_blank">
+                        <img class="tm-social p-2" src="/assets/img/icon/github.png" alt="github">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img class="tm-social p-2" src="/assets/img/icon/linkedin.png" alt="linkedin">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img class="tm-social p-2" src="/assets/img/icon/twitter.png" alt="twitter">
+                    </a>
+                </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
-    </div>
-</div> 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <p>
+                        Todos os direitos reservados: Miguel Nunes &copy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/Footer-->
     <!--Script dos servidores do boostrap-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
